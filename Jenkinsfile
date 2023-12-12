@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/akhano26/tocs.git', branch: 'main'
+                git url: 'https://github.com/akhano26/tocs/Jenkinsfile', branch: 'master'
             }
         }
         stage('Build') {
@@ -22,7 +22,7 @@ pipeline {
                 sshPublisher(
                     publishers: [
                         sshPublisherDesc(
-                            configName: 'MyUbuntuServer',
+                            configName: 'ahsan_instance',
                             transfers: [sshTransfer(sourceFiles: '**/*', remoteDirectory: '/myapp')],
                             execCommand: 'python /myapp/test.py'
                         )
