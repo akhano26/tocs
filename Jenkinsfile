@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/akhano26/tocs/Jenkinsfile', branch: 'master'
+                git url: 'https://github.com/akhano26/tocs.git', branch: 'master'
             }
         }
         stage('Build') {
