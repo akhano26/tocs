@@ -24,7 +24,7 @@ pipeline {
                         sshPublisherDesc(
                             configName: 'ahsan_instance',
                             transfers: [sshTransfer(sourceFiles: '**/*', remoteDirectory: '/myapp')],
-                            execCommand: 'python /myapp/test.py'
+                           
                         )
                     ]
                 )
